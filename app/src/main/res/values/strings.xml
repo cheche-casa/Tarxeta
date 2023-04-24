@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tarxeta</string>
+    <string name="Nome">Juan Vázquez</string>
+    <string name="Titulo">Desenvolvedor de apps en Android</string>
+    <string name="TLF">+34 600940146</string>
+    <string name="Correo">cheche.casa@outlook.es</string>
+    <string name="Web">https://cheche.myportfolio.com</string>
+</resources>
