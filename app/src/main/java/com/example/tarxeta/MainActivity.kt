@@ -48,57 +48,61 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun PintaTarxeta(modifier: Modifier = Modifier){
     Box (modifier = Modifier
-        .padding(top = 170.dp)
-        .background(color = colorResource(R.color.Fondo)),
+        .background(color = colorResource(R.color.Fondo))
     ) {
-        Box (modifier = Modifier.fillMaxSize()) {
-            Column(
-                modifier = modifier.fillMaxSize(),
-                verticalArrangement = Arrangement.Top,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Image(
-                    modifier = Modifier
-                        .size(100.dp),
-                    painter = painterResource(R.drawable.android_logo),
-                    contentDescription = null,
-                    contentScale = ContentScale.Fit
-                )
-                Text(
-                    text = stringResource(R.string.Nome),
-                    color = colorResource(R.color.white),
-                    fontSize = 40.sp,
-                    modifier = Modifier
-                        .padding(top = 4.dp, bottom = 4.dp)
-                )
-                Text(
-                    text = stringResource(R.string.Titulo),
-                    color = colorResource(R.color.teal_700),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp
-                )
-            }
-        }
         Box (modifier = Modifier
-            .padding(bottom = 30.dp)
-            .fillMaxSize()
-        ){
-            Column(
-                modifier = modifier
-                    .padding(top = 29.dp)
-                    .fillMaxSize(),
-                verticalArrangement = Arrangement.Bottom,
-                horizontalAlignment = Alignment.Start
-            ) {
-                Divider(color = Color.Gray, thickness = 1.dp)
-                Contactos(painterResource(R.drawable.baseline_email_white_18dp),
-                    stringResource(R.string.Correo))
-                Divider(color = Color.Gray, thickness = 1.dp)
-                Contactos(painterResource(R.drawable.baseline_phone_white_18dp),
-                    stringResource(R.string.TLF))
-                Divider(color = Color.Gray, thickness = 1.dp)
-                Contactos(painterResource(R.drawable.baseline_web_stories_white_18dp),
-                    stringResource(R.string.Web))
+            .padding(top = 170.dp)
+
+        ) {
+            Box (modifier = Modifier.fillMaxSize()) {
+                Column(
+                    modifier = modifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.Top,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Image(
+                        modifier = Modifier
+                            .size(100.dp),
+                        painter = painterResource(R.drawable.android_logo),
+                        contentDescription = null,
+                        contentScale = ContentScale.Fit
+                    )
+                    Text(
+                        text = stringResource(R.string.Nome),
+                        color = colorResource(R.color.gris_claro),
+                        fontSize = 40.sp,
+                        modifier = Modifier
+                            .padding(top = 4.dp, bottom = 4.dp)
+                    )
+                    Text(
+                        text = stringResource(R.string.Titulo),
+                        color = colorResource(R.color.teal_700),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 15.sp
+                    )
+                }
+            }
+            Box (modifier = Modifier
+                .padding(bottom = 30.dp)
+                .fillMaxSize()
+            ){
+                Column(
+                    modifier = modifier
+                        .padding(top = 29.dp)
+                        .fillMaxSize(),
+                    verticalArrangement = Arrangement.Bottom,
+                    horizontalAlignment = Alignment.Start
+                ) {
+                    Divider(color = Color.Gray, thickness = 1.dp)
+                    Contactos(painterResource(R.drawable.baseline_email_white_18dp),
+                        stringResource(R.string.Correo))
+                    Divider(color = Color.Gray, thickness = 1.dp)
+                    Contactos(painterResource(R.drawable.baseline_phone_white_18dp),
+                        stringResource(R.string.TLF))
+                    Divider(color = Color.Gray, thickness = 1.dp)
+                    Contactos(painterResource(R.drawable.baseline_web_stories_white_18dp),
+                        stringResource(R.string.Web))
+                }
             }
         }
     }
@@ -122,7 +126,7 @@ fun Contactos(
         Text(modifier = Modifier
             .padding(top = 5.dp,start = 15.dp),
             text = Texto,
-            color = colorResource(R.color.white),
+            color = colorResource(R.color.gris_claro),
             fontSize = 16.sp
         )
     }
