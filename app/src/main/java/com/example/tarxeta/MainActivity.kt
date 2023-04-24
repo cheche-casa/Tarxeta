@@ -6,11 +6,15 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Divider
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
@@ -77,8 +81,8 @@ fun PintaTarxeta(modifier: Modifier = Modifier){
         }
         Box (modifier = Modifier
             .padding(bottom = 30.dp)
-            .fillMaxSize())
-        {
+            .fillMaxSize()
+        ){
             Column(
                 modifier = modifier
                     .padding(top = 29.dp)
@@ -86,10 +90,13 @@ fun PintaTarxeta(modifier: Modifier = Modifier){
                 verticalArrangement = Arrangement.Bottom,
                 horizontalAlignment = Alignment.Start
             ) {
+                Divider(color = Color.Gray, thickness = 1.dp)
                 Contactos(painterResource(R.drawable.baseline_email_white_18dp),
                     stringResource(R.string.Correo))
+                Divider(color = Color.Gray, thickness = 1.dp)
                 Contactos(painterResource(R.drawable.baseline_phone_white_18dp),
                     stringResource(R.string.TLF))
+                Divider(color = Color.Gray, thickness = 1.dp)
                 Contactos(painterResource(R.drawable.baseline_web_stories_white_18dp),
                     stringResource(R.string.Web))
             }
