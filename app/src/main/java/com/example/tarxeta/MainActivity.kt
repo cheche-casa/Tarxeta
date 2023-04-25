@@ -12,8 +12,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.painter.Painter
@@ -32,11 +31,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TarxetaTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier
-                        .fillMaxSize(),
-                    color = colorResource(R.color.Fondo)
+                        .fillMaxSize()
                 ) {
                     PintaTarxeta()
                 }
@@ -47,12 +44,15 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun PintaTarxeta(modifier: Modifier = Modifier){
+    val listaColores = listOf(colorResource(R.color.fondo_0),
+        colorResource(R.color.fondo_1),
+        colorResource(R.color.fondo_2))
+
     Box (modifier = Modifier
-        .background(color = colorResource(R.color.Fondo))
+        .background(Brush.verticalGradient(listaColores))
     ) {
         Box (modifier = Modifier
             .padding(top = 170.dp)
-
         ) {
             Box (modifier = Modifier.fillMaxSize()) {
                 Column(
@@ -83,7 +83,7 @@ fun PintaTarxeta(modifier: Modifier = Modifier){
                 }
             }
             Box (modifier = Modifier
-                .padding(bottom = 30.dp)
+                .padding(bottom = 50.dp)
                 .fillMaxSize()
             ){
                 Column(
@@ -111,8 +111,7 @@ fun PintaTarxeta(modifier: Modifier = Modifier){
 @Composable
 fun Contactos(
     Icono: Painter,
-    Texto: String,
-    modifier: Modifier = Modifier
+    Texto: String
 ) {
     Row() {
         Image(modifier = Modifier
